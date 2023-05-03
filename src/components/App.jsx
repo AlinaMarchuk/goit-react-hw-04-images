@@ -21,6 +21,7 @@ export const App = () => {
   const handleSubmit = inputQuery => {
     setInputValue(inputQuery);
     setPage(1);
+    setPicturesData([]);
   };
 
   const loaderClick = () => {
@@ -43,10 +44,6 @@ export const App = () => {
       setIsModal(false);
     }
   };
-
-  useEffect(() => {
-    setPicturesData([]);
-  }, [inputValue]);
 
   useEffect(() => {
     if (inputValue.trim() === '') {
